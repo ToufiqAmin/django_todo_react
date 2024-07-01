@@ -1,13 +1,5 @@
 {
-    "builds": [{
-        "src": "backend/wsgi.py",
-        "use": "@vercel/python",
-        "config": { "maxLambdaSize": "15mb"}
-    }],
-    "routes": [
-        {
-            "src": "/(.*)",
-            "dest": "backend/wsgi.py"
-        }
+    "rewrites": [
+      { "source": "/(.*)", "destination": "/index.js" }
     ]
-}
+  }
